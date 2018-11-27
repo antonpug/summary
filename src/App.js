@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import YourInfo from './YourInfo';
-import VehicleInfo from './VehicleInfo';
+import Summary from './Summary';
 import './App.css';
 
 class App extends Component {
@@ -23,8 +22,7 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-          <Route exact path="/" render={(props) => <YourInfo {...props} state={this.state}/>}/>
-          <Route exact path="/vehicleInfo" render={(props) => <VehicleInfo state={this.state}/>}/>
+          <Route exact path="/" render={(props) => <Summary {...props} state={this.state}/>}/>
       </div>
       </Router>
     );
